@@ -99,7 +99,7 @@ contract DIREBEAR is Ownable, ERC721 {
         bearWallet = wallet;
     }
     
-    function _getCurrentEthAmount() internal view returns(uint256){
+    function _getCurrentEthAmount() internal view returns(uint256 ethAmount){
         if(bearLength <= 100){
             return 0.2 ether;
         }else if(bearLength <= 200){
@@ -124,8 +124,6 @@ contract DIREBEAR is Ownable, ERC721 {
             return 5 ether;
         }
     }
-    
-
     
     function getCurrentEthAmount() external view returns(uint256){
         return _getCurrentEthAmount();
